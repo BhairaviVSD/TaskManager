@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org" lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Missed</title>
+        <link rel="stylesheet" th:href="@{/styles/missed.css}">
+        <link rel="stylesheet" th:href="@{/styles/common-for-pages.css}">
+        <link th:insert="~{blocks/favicon.html}">
+        <script src="https://kit.fontawesome.com/018f2343ea.js" crossorigin="anonymous"></script>
+        <script th:src="@{/scripts/activePage.js}"></script>
+    </head>
+    <body>
+    <div class="grid-container">
+        <div th:insert="~{blocks/side-bar :: side-bar}"></div>
+        <div class="tasks-container">
+            <div th:if="${#lists.isEmpty(missedTasks)}" class="no-tasks">
+                <h2>There are no missed tasks, keep it up!</h2>
+            </div>
+            <div th:if="${!#lists.isEmpty(missedTasks)}">
+                <h2>Missed tasks:</h2>
+                <div th:each="task : ${missedTasks}">
+                    <a th:href="'/home/' + ${task.getId()}">
+                        <div class="task-block">
+                            <h3 class="task-name" th:text="${task.getName()}"></h3>
+                            <p class="task-deadline" th:text="'Deadline: ' + ${task.getEnglishFormattedDeadline()}"></p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    </body>
+</html>

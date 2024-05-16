@@ -1,0 +1,282 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+@import "variables.css";
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins" , sans-serif;
+}
+body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--fourth-color);
+    padding: 30px;
+}
+.container{
+    position: relative;
+    max-width: 900px;
+    width: 100%;
+    background: #fff;
+    padding: 20px 40px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    perspective: 2700px;
+}
+.container .cover{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    height: 100%;
+    width: 50%;
+    z-index: 98;
+    transition: all 1s ease;
+    transform-origin: left;
+    transform-style: preserve-3d;
+}
+.container .cover::before,
+.container .cover::after{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: var(--first-color);
+    opacity: 0.5;
+    z-index: 12;
+}
+.container .cover::after{
+    opacity: 0.3;
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+}
+.container .cover img{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: 10;
+}
+.title{
+    place-self: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.container .forms{
+    height: 100%;
+    width: 100%;
+    background: #fff;
+}
+.container .form-content{
+    /*display: flex;*/
+    width: 47%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.forms .form-content .title h2{
+    display: inline-block;
+    font-weight: normal;
+    font-size: 1.5rem;
+    padding: 0.5rem 0.8rem;
+    border-radius: 0.4rem;
+    background-color: var(--first-color);
+    color:#fff;
+    margin-bottom: -10px;
+}
+.forms .form-content .title:before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 55px;
+    background: var(--first-color);
+}
+.forms .signup-form  .title:before{
+    width: 20px;
+}
+.forms .form-content .input-boxes{
+    margin-top: 30px;
+    font-size: 1.2rem;
+}
+.forms .form-content .input-box{
+    display: flex;
+    align-items: center;
+    height: 50px;
+    width: 100%;
+    margin: 5px 0;
+    position: relative;
+}
+ p,
+.priority p {
+    color: var(--grey);
+    margin-right: 15px;
+}
+.priority p {
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+.note p {
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.form-content .input-box input{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    border: none;
+    padding: 0 10px;
+    font-size: 1.2rem;
+    color: var(--grey);
+    font-weight: 500;
+    border-bottom: 2px solid rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+}
+.form-content .input-box input:focus,
+.form-content .input-box input:valid{
+    border-color: var(--first-color);
+}
+.form-content .input-box i{
+    position: absolute;
+    color: var(--first-color);
+    font-size: 17px;
+}
+.forms .form-content .text{
+    font-size: 18px;
+    font-weight: 500;
+    color: #333;
+}
+.forms .form-content .text a{
+    font-size: 20px;
+    color: var(--first-color);
+    text-decoration: none;
+
+}
+.forms .form-content .text a:hover{
+    text-decoration: underline;
+}
+.forms .form-content .text,
+.forms .form-content .button{
+    margin-top: 30px;
+}
+
+/*.forms .form-content .button input{*/
+/*    color: #fff;*/
+/*    background: var(--first-color);*/
+/*    border-radius: 6px;*/
+/*    padding: 10px 20px;*/
+/*    transition: all 0.4s ease;*/
+/*}*/
+/*.forms .form-content .button input:hover{*/
+/*    background: var(--zero-color);*/
+/*}*/
+.forms .form-content label{
+    margin-left: 1rem;
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: var(--grey);
+}
+
+.priority input[type="radio"] {
+    display: none;
+}
+
+.priority label {
+    margin-right: 1.2rem;
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: var(--grey);
+}
+
+.priority label:before {
+    content: "";
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    border: 2px solid var(--first-color);
+    border-radius: 50%;
+    margin-right: 0.5rem;
+    vertical-align: middle;
+    transition: background-color 0.3s ease;
+}
+.priority div.row {
+    margin-bottom: 0.4rem;
+}
+textarea{
+    width: 100%;
+    resize: vertical;
+    height: 100px;
+    max-height: 600px;
+    min-height: 100px;
+    font-size: 1.2rem;
+    padding: 10px;
+}
+
+.forms .form-content .button{
+    display: flex;
+    align-items: center;
+    height: 43px;
+    width: 100%;
+    margin: 5px 0;
+    position: relative;
+
+}
+.form-content .button input{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    border: none;
+    border-radius: 6px;
+    padding: 0 20px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    background-color: var(--first-color);
+    color: #fff;
+
+}
+.form-content .button input:hover {
+    background: var(--zero-color);
+}
+
+
+.priority input[type="radio"]:checked + label:before {
+    background-color: var(--first-color);
+}
+
+#priority1:checked + label:before {
+    background-color: var(--pr-1-border-color);
+    border-color: var(--pr-1-border-color);
+}
+
+#priority2:checked + label:before {
+    background-color: var(--pr-2-border-color);
+    border-color: var(--pr-2-border-color);
+}
+
+#priority3:checked + label:before {
+    background-color: var(--pr-3-border-color);
+    border-color: var(--pr-3-border-color);
+}
+
+
+@media (max-width: 820px){
+    .forms .form-content .title:before{
+        display: none;
+    }
+}
+@media (max-width: 640px) {
+    .container .cover{
+        display: none;
+    }
+    .form-content .login-form,
+    .form-content .signup-form{
+        width: 100%;
+    }
+    .form-content .signup-form{
+        display: none;
+    }
+}

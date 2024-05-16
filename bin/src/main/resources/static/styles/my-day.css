@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+@import "variables.css";
+
+.first-task-block{
+    border: var(--pr-1-border-color) solid 1px;
+    width: 18rem;
+    background-color: var(--pr-1-main-background-color);
+    border-radius: 0.4rem;
+    margin-right: 0;
+    margin-top: 1.5rem;
+    transition: background-color 0.3s ease;
+    margin-left: 25px;
+}
+.first-task-block:hover{
+    background-color: var(--pr-1-hover-background-color);
+}
+
+.second-task-block{
+    border: var(--pr-2-border-color) solid 1px;
+    width: 18rem;
+    background-color: var(--pr-2-main-background-color);
+    border-radius: 0.4rem;
+    margin-right: 0;
+    margin-top: 1.5rem;
+    transition: background-color 0.3s ease;
+    margin-left: 25px;
+}
+.second-task-block:hover{
+    background-color: var(--pr-2-hover-background-color);
+}
+
+.third-task-block{
+    border: var(--pr-3-border-color) solid 1px;
+    width: 18rem;
+    background-color: var(--pr-3-main-background-color);
+    border-radius: 0.4rem;
+    margin-right: 0;
+    margin-top: 1.5rem;
+    transition: background-color 0.3s ease;
+    margin-left: 25px;
+}
+.third-task-block:hover{
+    background-color: var(--pr-3-hover-background-color);
+}

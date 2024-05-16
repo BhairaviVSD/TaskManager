@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{/styles/task-add-and-update.css}">
+    <link th:insert="~{blocks/favicon.html}">
+    <title> Add </title>
+    <script src="https://kit.fontawesome.com/018f2343ea.js" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div class="container">
+        <div class="cover">
+            <div class="front">
+                <img th:src="@{/images/workplace.jpeg}" alt="">
+            </div>
+        </div>
+        <div class="forms">
+            <div class="form-content">
+                <div class="title">
+                    <h2>
+                        Create a New Task
+                    </h2>
+                </div>
+                <form action="/home/add" method="post">
+                    <div class="input-boxes">
+                        <div class="input-box">
+                            <p> Name: </p>
+                            <input type="text" name="name" required="">
+                        </div>
+                        <div class="input-box">
+                            <p>Deadline: </p>
+                            <input type="date" id="deadline" name="deadline"  required="">
+                        </div>
+                        <div class="priority">
+                            <p>Priority of the task</p>
+                            <div class="row">
+                                <input type="radio" id="priority1" name="priority" value="1" required>
+                                <label for="priority1">Important</label><br>
+                            </div>
+                            <div class="row">
+                                <input type="radio" id="priority2" name="priority" value="2">
+                                <label for="priority2">Usual</label><br>
+                            </div>
+                            <div class="row">
+                                <input type="radio" id="priority3" name="priority" value="3">
+                                <label for="priority3">Petty</label><br>
+                            </div>
+                        </div>
+                        <div class="note">
+                            <p>Note:</p>
+                            <textarea name="note" placeholder="Add a note"></textarea>
+                        </div>
+                        <div class="button">
+                            <input type="submit" value="Create"/>
+                        </div>
+                    </div>
+                </form>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

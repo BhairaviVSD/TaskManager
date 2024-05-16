@@ -1,0 +1,43 @@
+/* Define common styles for task blocks */
+.task-block {
+    border: 1px solid;
+    width: 18rem;
+    border-radius: 0.4rem;
+    margin-right: 0;
+    margin-top: 1.5rem;
+    transition: background-color 0.3s ease;
+    margin-left: 25px;
+}
+
+/* Modifier classes for different color variations */
+.task-block--pr-1 {
+    border-color: var(--pr-1-border-color);
+    background-color: var(--pr-1-main-background-color);
+}
+
+.task-block--pr-2 {
+    border-color: var(--pr-2-border-color);
+    background-color: var(--pr-2-main-background-color);
+}
+
+.task-block--pr-3 {
+    border-color: var(--pr-3-border-color);
+    background-color: var(--pr-3-main-background-color);
+}
+
+/* Hover styles for task blocks */
+.task-block:hover {
+    background-color: var(--zero-color); /* Default hover color */
+}
+
+.task-block:hover.task-block--pr-1 {
+    background-color: var(--pr-1-hover-background-color);
+}
+
+.task-block:hover.task-block--pr-2 {
+    background-color: var(--pr-2-hover-background-color);
+}
+
+.task-block:hover.task-block--pr-3 {
+    background-color: var(--pr-3-hover-background-color);
+}

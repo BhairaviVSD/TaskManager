@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+@import "variables.css";
+
+html {
+    background-color: var(--sixth-color);
+    font-size: 16px;
+    font-family: "Poppins", sans-serif;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 20px;
+}
+
+.tasks-container {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-gap: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+span {
+    font-size: 2rem;
+}
+
+.tasks-container a {
+    text-decoration: none;
+    color: var(--grey);
+}
+
+.task-name, .task-deadline {
+    margin: 0.3rem 0;
+}
+
+.tasks-container h2 {
+    display: inline-block;
+    font-weight: normal;
+    margin: 0;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #4CAF50; /* Light green */
+    color: #fff;
+}
+
+.tasks-container .no-tasks {
+    place-self: center;
+    text-align: center;
+}
+
+.tasks-container h3 {
+    margin: 0.5rem 0;
+    font-weight: bold;
+}
+
+.tasks-container p {
+    margin: 0.3rem 0;
+    font-size: 0.9rem;
+}

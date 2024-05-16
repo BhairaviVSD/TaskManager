@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+@import "variables.css";
+
+.task-block{
+    border: var(--missed-border-color) solid 1px;
+    width: 18rem;
+    background-color: var(--missed-main-background-color);
+    border-radius: 0.4rem;
+    margin-right: 0;
+    margin-top: 1.5rem;
+    margin-left: 25px;
+    transition: background-color 0.3s ease;
+}
+.task-block:hover{
+    background-color: var(--missed-hover-background-color);
+}

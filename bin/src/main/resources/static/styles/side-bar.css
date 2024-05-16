@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+@import "variables.css";
+html{
+    background-color: var(--fifth-color);
+    font-size: 24px;
+}
+span{
+    font-size: 1.4rem;
+    padding-top: 0.875rem;
+    padding-bottom: 0.875rem;
+    padding-left: 0.6rem;
+}
+.strip{
+    border-top: 2px solid var(--zero-color);
+    margin-bottom: 30px;
+    margin-top: 0.5rem;
+    margin-left: -0.7rem;
+    margin-right: -1rem;
+}
+
+i {
+    color: var(--grey);
+    font-size: 1.25rem;
+    padding-left: 0.6rem;
+    transition: color 0.3s ease
+}
+i:hover{
+    color: var(--first-color);
+}
+
+.sidebar {
+    background-color: var(--fourth-color);
+    width: 11rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    padding: 1rem;
+    padding-left: 0.7rem;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar ul li {
+    font-size: 1.1rem;
+    padding-top: 0.875rem;
+    padding-bottom: 0.875rem;
+    padding-left: 0.6rem;
+    border-radius: 0.4rem;
+}
+.sidebar ul li.active {
+    font-size: 1.1rem;
+    padding-top: 0.6rem;
+    padding-bottom: 0.6rem;
+    padding-left: 0.6rem;
+    border-radius: 0.4rem;
+    background-color: var(--first-color);
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: var(--grey);
+    transition: color 0.3s ease
+}
+.sidebar ul li.active * {
+    text-decoration: none;
+    color: rgb(227, 227, 227);
+}
+
+.sidebar ul li a:hover {
+    color: var(--first-color);
+}
+.sidebar ul li.active a:hover {
+    color: rgb(227, 227, 227);
+}
+
+form {
+    display: inline;
+    border: none;
+    background: none;
+    padding-left: 0.6rem;
+}
+
+form input[type="submit"] {
+    background: none;
+    border: none;
+    font-size: 1.1rem;
+    font-family: inherit;
+    color: inherit;
+    cursor: pointer;
+    text-decoration: none;
+    transition: color 0.3s ease
+}
+form input[type="submit"]:hover{
+    color: var(--first-color);
+}

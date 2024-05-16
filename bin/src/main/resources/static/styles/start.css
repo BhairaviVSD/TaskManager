@@ -1,0 +1,140 @@
+/* Google Font Link */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+@import "variables.css";
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins" , sans-serif;
+}
+body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--fourth-color);
+    padding: 30px;
+}
+.container{
+    position: relative;
+    max-width: 900px;
+    /*max-height: 500px;*/
+    width: 100%;
+    background: #fff;
+    padding: 50px 60px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    perspective: 2700px;
+    z-index: 0;
+}
+.container .cover{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+    transition: all 1s ease;
+    transform-origin: left;
+    transform-style: preserve-3d;
+}
+.container .cover::before,
+.container .cover::after{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: var(--first-color);
+    opacity: 0.3;
+    z-index: 1;
+}
+.container .cover img{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+.container .content{
+    position: relative;
+    z-index: 3;
+}
+.container .content .text-1, .text-2 {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+.container .content h1, p {
+    display: inline;
+    text-align: center;
+    /*color: var(--zero-color);*/
+    color: #fff;
+    background: var(--first-color);
+    border-radius: 6px;
+}
+.container .content h1{
+    font-size: 50px;
+    padding: 10px 50px;
+    margin-bottom: 40px;
+}
+.container .content p{
+    font-style: italic;
+    font-size: 25px;
+    padding: 10px 30px;
+    margin-bottom: 150px;
+
+}
+.container .content .buttons{
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    padding: 0 180px;
+    margin-bottom: 50px;
+}
+.container .content .buttons a{
+    font-size: 22px;
+    text-decoration: none;
+    color: #fff;
+    background: var(--first-color);
+    border-radius: 6px;
+    margin: 10px;
+    padding: 12px 50px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+.container .content .buttons a:hover {
+    background: var(--zero-color);
+}
+@media (max-width: 960px){
+    .container .content .buttons a{
+        font-size: 20px;
+        padding: 12px 35px;
+
+    }
+    .container .content .buttons{
+        padding: 0 80px;
+
+    }
+}
+/*@media (max-width: 680px){*/
+/*    .container{*/
+/*        max-width: 680px;*/
+/*    }*/
+/*    .container .content h1{*/
+/*        font-size: 25px;*/
+/*    }*/
+/*    .container .content p{*/
+/*        font-size: 20px;*/
+/*    }*/
+/*    .container .content .buttons{*/
+/*        display: block;*/
+/*        !*padding: 0 ;*!*/
+/*    }*/
+/*    .container .content .buttons a{*/
+/*        !*display: block;*!*/
+/*        padding: 12px;*/
+/*        text-align: center;*/
+/*        justify-content: center;*/
+/*        margin-bottom: 40px;*/
+/*    }*/
+/*}*/
+/*

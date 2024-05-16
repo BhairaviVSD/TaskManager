@@ -1,0 +1,28 @@
+:root{
+    --zero-color: #19538a;
+    --first-color:#287dd2;
+    --second-color: #54c2d3;
+    --third-color: #7dc7d5;
+    --fourth-color: #bbe4e9;
+    --fifth-color: #e1f3f6;
+    --sixth-color: #f5f8f9;
+    --grey: #333;
+
+    --missed-border-color: #b90101;
+    --missed-main-background-color: #fabfbf;
+    --missed-hover-background-color: #ff8c8c;
+
+    --pr-1-border-color:#f16821;
+    --pr-1-main-background-color: #f6c0af;
+    --pr-1-hover-background-color: #f1ac91;
+
+    --pr-2-border-color: #f3a333;
+    --pr-2-main-background-color: #f5c9a0;
+    --pr-2-hover-background-color: #e8b782;
+
+
+    --pr-3-border-color: #05885b;
+    --pr-3-main-background-color: #a0f1cd;
+    --pr-3-hover-background-color: #7ab99d;
+
+}

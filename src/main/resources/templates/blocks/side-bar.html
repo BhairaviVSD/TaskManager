@@ -1,0 +1,46 @@
+<div th:fragment = "side-bar">
+  <link rel="stylesheet" th:href="@{/styles/side-bar.css}">
+  <div class="sidebar">
+    <i class="fa-solid fa-user"></i>
+    <span th:text="${userName}">
+    </span><br>
+    <div class="strip"></div>
+    <ul>
+      <li class="home" th:classappend="${activePage == 'home'} ? 'active'">
+        <i class="fa-solid fa-house"></i>
+        <a th:href="@{/home}">
+          Home
+        </a>
+      </li>
+      <li class="my-day" th:classappend="${activePage == 'my-day'} ? 'active'">
+        <i class="fa-solid fa-sun"></i>
+        <a th:href="@{/my-day}">
+          My Day
+        </a>
+      </li>
+      <li class="done" th:classappend="${activePage == 'done'} ? 'active'">
+        <i class="fa-solid fa-check"></i>
+        <a th:href="@{/done}">
+          Done
+        </a>
+      </li>
+      <li class="missed" th:classappend="${activePage == 'missed'} ? 'active'">
+        <i class="fa-solid fa-xmark"></i>
+        <a th:href="@{/missed}">
+          Missed
+        </a>
+      </li>
+      <li class="add">
+        <i class="fa-solid fa-plus"></i>
+        <a th:href = "@{/home/add}" >
+          Add
+        </a>
+      </li>
+    </ul>
+    <div class="strip"></div>
+    <form th:action="@{/logout}" method="post">
+      <i class="fa-solid fa-right-from-bracket"></i>
+      <input type="submit" value="Log Out"/>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title> Task Scheduler </title>
+    <link rel="stylesheet" th:href="@{/styles/start.css}">
+    <link th:insert="~{blocks/favicon.html}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="container">
+    <div class="cover">
+        <div class="front1">
+            <img src="images/workplace.jpeg" alt="">
+        </div>
+    </div>
+    <div class="content">
+        <div class="text-1">
+            <h1>Task Scheduler</h1>
+        </div>
+        <div class="text-2">
+            <p>Keep your ideas organised</p>
+        </div>
+        <div class="buttons">
+            <a th:href="'/sign-up'">
+                Sign up
+            </a>
+            <br>
+            <a th:href="'/log-in'">
+                Log-in
+            </a>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>

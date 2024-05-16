@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+@import "variables.css";
+html{
+    background-color: var(--sixth-color);
+    font-size: 10px;
+    font-family: "Poppins" , sans-serif;
+
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: 9rem 1fr;
+    grid-gap: 130px;
+}
+
+.tasks-container {
+    grid-column: 2;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr;
+}
+span {
+    /*font-weight: bold;*/
+    font-size: 3.5rem;
+    /*color: var(--grey);*/
+}
+.tasks-container a {
+    text-decoration: none;
+    /*color: black; */
+    color: var(--grey);
+}
+
+.task-name{
+    margin: 0.3rem;
+}
+.task-deadline{
+    margin: 0.3rem;
+}
+.tasks-container h2 {
+    display: inline-block;
+    font-weight: normal;
+    margin-top: 0.8rem;
+    margin-bottom: 0;
+    font-size: 1.2rem;
+    padding: 0.8rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-radius: 0.4rem;
+    background-color: var(--first-color);
+    color: rgb(227, 227, 227);
+}
+.tasks-container .no-tasks{
+    place-self: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.tasks-container h3 {
+    margin: 0.5rem;
+    margin-bottom: 0.3rem;
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: var(--grey);
+
+}
+.tasks-container p {
+    margin-top: 0.3rem;
+    margin-left: 1rem;
+    font-size: 0.8rem;
+    color: var(--grey);
+}

@@ -1,0 +1,26 @@
+:root {
+    --zero-color: #4CAF50; /* Green */
+    --first-color: #FF5722; /* Deep Orange */
+    --second-color: #FFC107; /* Amber */
+    --third-color: #2196F3; /* Blue */
+    --fourth-color: #9C27B0; /* Purple */
+    --fifth-color: #E91E63; /* Pink */
+    --sixth-color: #00BCD4; /* Cyan */
+    --grey: #333;
+
+    --missed-border-color: #FF5252; /* Light Red */
+    --missed-main-background-color: #FFCCBC; /* Light Orange */
+    --missed-hover-background-color: #FFAB91; /* Lighter Orange */
+
+    --pr-1-border-color: #FF9800; /* Orange */
+    --pr-1-main-background-color: #FFECB3; /* Light Yellow */
+    --pr-1-hover-background-color: #FFE082; /* Lighter Yellow */
+
+    --pr-2-border-color: #FFEB3B; /* Yellow */
+    --pr-2-main-background-color: #FFF9C4; /* Pale Yellow */
+    --pr-2-hover-background-color: #FFF59D; /* Lighter Yellow */
+
+    --pr-3-border-color: #4CAF50; /* Green */
+    --pr-3-main-background-color: #C8E6C9; /* Light Green */
+    --pr-3-hover-background-color: #A5D6A7; /* Lighter Green */
+}

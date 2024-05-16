@@ -1,0 +1,54 @@
+ <!DOCTYPE html>
+  <html lang="en" dir="ltr" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org">
+    <head>
+      <meta charset="UTF-8">
+      <title> Log in </title>
+      <link rel="stylesheet" th:href="@{/styles/login-signup.css}">
+        <link th:insert="~{blocks/favicon.html}">
+      <script src="https://kit.fontawesome.com/018f2343ea.js" crossorigin="anonymous"></script>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+  <div class="container">
+    <div class="cover">
+      <div class="front">
+        <img src="images/workplace.jpeg" alt="">
+      </div>
+    </div>
+    <div class="forms">
+      <div class="form-content">
+        <div class="login-form">
+          <div class="title">Enter your details to log in</div>
+          <div th:if="${param.error}" class="invalid">
+            <p>Invalid username or password</p>
+          </div>
+          <form th:action="@{/log-in}" method="post">
+            <div class="input-boxes">
+              <div class="input-box">
+<!--                <svg>-->
+<!--                  <use xlink:href="/src/main/resources/static/images/icons/house-solid.svg"></use>-->
+<!--                </svg>-->
+                <i class="fa-solid fa-envelope"></i>
+                <input type="email" name="username" placeholder="Email" required>
+              </div>
+              <div class="input-box">
+                <i class="fa-solid fa-lock"></i>
+                <input type="password" name="password" placeholder="Password" required>
+              </div>
+<!--              TODO: futher uodates: code up 'forgot password' functionality with emails system-->
+<!--              <div class="text"><a href="#">Forgot password?</a></div>-->
+              <div class="button input-box">
+                <input type="submit" value="Log In"/>
+              </div>
+              <div class="text sign-up-text">
+                Don't have an account? <br>
+                <a th:href="'/sign-up'">Sign up</a>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  </body>
+</html>

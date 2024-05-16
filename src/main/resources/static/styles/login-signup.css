@@ -1,0 +1,233 @@
+/* Google Font Link */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+@import "variables.css";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--fourth-color);
+    padding: 30px;
+}
+
+.container {
+    position: relative;
+    max-width: 900px;
+    width: 100%;
+    background: #fff;
+    padding: 55px 40px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    perspective: 2700px;
+    border-radius: 10px;
+}
+
+.container .cover {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    height: 100%;
+    width: 50%;
+    z-index: 98;
+    transition: all 1s ease;
+    transform-origin: left;
+    transform-style: preserve-3d;
+}
+
+.container .cover::before,
+.container .cover::after {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    opacity: 0.5;
+    z-index: 12;
+}
+
+.container .cover::after {
+    opacity: 0.3;
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+}
+
+.container .cover img {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: 10;
+}
+
+.container .cover .text {
+    position: absolute;
+    z-index: 130;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container .forms {
+    height: 100%;
+    width: 100%;
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.container .form-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.form-content .login-form,
+.form-content .signup-form {
+    width: calc(50% - 15px);
+    padding: 10px;
+}
+
+.invalid p {
+    font-size: 20px;
+    margin-top: 15px;
+    color: #e70a0a;
+}
+
+.forms .form-content .title {
+    position: relative;
+    font-size: 26px;
+    font-weight: 500;
+    color: var(--grey);
+}
+
+.forms .form-content .title:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    height: 3px;
+    width: 55px;
+    background: var(--first-color);
+}
+
+.forms .signup-form .title:before {
+    width: 20px;
+}
+
+.forms .form-content .input-boxes {
+    margin-top: 30px;
+}
+
+.forms .form-content .input-box {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    width: 100%;
+    margin: 10px 0;
+    position: relative;
+}
+
+.form-content .input-box input {
+    height: 100%;
+    width: 100%;
+    outline: none;
+    border: none;
+    padding: 0 15px;
+    font-size: 20px;
+    font-weight: 500;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.form-content .input-box input:focus,
+.form-content .input-box input:valid {
+    border-color: var(--first-color);
+}
+
+.form-content .input-box i {
+    position: absolute;
+    color: var(--first-color);
+    font-size: 17px;
+}
+
+.forms .form-content .text {
+    font-size: 18px;
+    font-weight: 500;
+    color: #333;
+}
+
+.forms .form-content .text a {
+    font-size: 20px;
+    color: var(--first-color);
+    text-decoration: none;
+}
+
+.forms .form-content .text a:hover {
+    text-decoration: underline;
+}
+
+.forms .form-content .text,
+.forms .form-content .button {
+    margin-top: 30px;
+}
+
+.forms .form-content .button input {
+    color: #fff;
+    background: var(--first-color);
+    border-radius: 6px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    border: none;
+    outline: none;
+}
+
+.forms .form-content .button input:hover {
+    background: var(--zero-color);
+}
+
+.forms .form-content label {
+    color: var(--first-color);
+    cursor: pointer;
+}
+
+.forms .form-content label:hover {
+    text-decoration: underline;
+}
+
+.forms .form-content .login-text,
+.forms .form-content .sign-up-text {
+    text-align: center;
+    margin-top: 25px;
+}
+
+@media (max-width: 820px) {
+    .forms .form-content .title:before {
+        display: none;
+    }
+}
+
+@media (max-width: 640px) {
+    .container .cover {
+        display: none;
+    }
+
+    .form-content .login-form,
+    .form-content .signup-form {
+        width: 100%;
+    }
+
+    .form-content .signup-form {
+        display: none;
+    }
+}

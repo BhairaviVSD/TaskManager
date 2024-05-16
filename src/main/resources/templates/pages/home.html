@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org" lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title> Home </title>
+        <script src="https://kit.fontawesome.com/018f2343ea.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" th:href="@{/styles/home.css}">
+        <link rel="stylesheet" th:href="@{/styles/common-for-pages.css}">
+        <link th:insert="~{blocks/favicon.html}">
+        <script th:src="@{/scripts/activePage.js}"></script>
+    </head>
+    <body>
+        <div class="grid-container">
+
+            <div th:insert="~{blocks/side-bar :: side-bar}"></div>
+            <div class="tasks-container">
+                <div th:if="${#lists.isEmpty(todayTasks)}" class="no-tasks">
+                    <h2>No tasks for today<br>Add tasks to achieve your goals!</h2>
+                </div>
+                <div th:if="${!#lists.isEmpty(todayTasks)}" class="today-later">
+                    <h2>Today I should:</h2>
+                    <div th:each="task : ${todayTasks}">
+                        <a th:href="'/home/' + ${task.getId()}">
+                            <div class="task-block">
+                                <h3 class="task-name" th:text="${task.getName()}"></h3>
+                                <p class="task-deadline" th:text="'Deadline: ' + ${task.getEnglishFormattedDeadline()}"></p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div th:if="${!#lists.isEmpty(laterTasks)}" class="today-later">
+                    <h2>Later: </h2>
+                    <div th:each="task : ${laterTasks}">
+                        <a th:href="'/home/' + ${task.getId()}">
+                            <div class="task-block">
+                                <h3 class="task-name" th:text="${task.getName()}"></h3>
+                                <p class="task-deadline" th:text="'Deadline: ' + ${task.getEnglishFormattedDeadline()}"></p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
